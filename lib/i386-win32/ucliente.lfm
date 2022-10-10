@@ -1,0 +1,175 @@
+inherited ClienteF: TClienteF
+  Caption = 'Cliente'
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    ActivePage = TabSheet2
+    TabIndex = 1
+    inherited TabSheet1: TTabSheet
+      OnShow = nil
+      inherited Panel1: TPanel
+        inherited btnBusca: TBitBtn
+          Left = 192
+          OnClick = btnBuscaClick
+        end
+        inherited Label1: TLabel
+          Top = 20
+        end
+        inherited Edit1: TEdit
+          Left = 90
+          Top = 12
+          Width = 80
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Columns = <        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'ID Cliente'
+            Width = 60
+            FieldName = 'clienteid'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'Tipo Cliente'
+            Width = 75
+            FieldName = 'tipo_cliente'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'CPF/CNPJ'
+            Width = 120
+            FieldName = 'cpf_cnpj_cliente'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Caption = 'Nome Cliente'
+            Width = 250
+            FieldName = 'nome_cliente'
+          end>
+        DataSource = DSCliente
+        FixedColor = clWhite
+        Flat = True
+        Font.CharSet = ANSI_CHARSET
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+        ReadOnly = True
+      end
+      inherited Panel2: TPanel
+        inherited Panel3: TPanel
+          inherited btnNovo: TBitBtn
+            Left = 24
+            Width = 75
+            OnClick = btnNovoClick
+          end
+        end
+        inherited Panel4: TPanel
+          inherited BitBtn3: TBitBtn
+            OnClick = BitBtn3Click
+          end
+        end
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      inherited Panel5: TPanel
+        inherited Panel6: TPanel
+          inherited BitBtn4: TBitBtn
+            OnClick = BitBtn4Click
+          end
+          inherited BitBtn5: TBitBtn
+            OnClick = BitBtn5Click
+          end
+        end
+        inherited Panel7: TPanel
+          inherited BitBtn6: TBitBtn
+            OnClick = BitBtn6Click
+          end
+        end
+      end
+      object Label2: TLabel[1]
+        Left = 131
+        Height = 15
+        Top = 104
+        Width = 51
+        Caption = 'ID Cliente'
+        ParentColor = False
+      end
+      object Label3: TLabel[2]
+        Left = 131
+        Height = 15
+        Top = 160
+        Width = 63
+        Caption = 'Tipo Cliente'
+        ParentColor = False
+      end
+      object Label4: TLabel[3]
+        Left = 235
+        Height = 15
+        Top = 104
+        Width = 93
+        Caption = 'CPF/CNPJ Cliente'
+        ParentColor = False
+      end
+      object Label5: TLabel[4]
+        Left = 235
+        Height = 15
+        Top = 160
+        Width = 90
+        Caption = 'Nome do Cliente'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[5]
+        Left = 131
+        Height = 23
+        Top = 128
+        Width = 32
+        DataField = 'clienteid'
+        DataSource = DSCliente
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEType: TDBEdit[6]
+        Left = 131
+        Height = 23
+        Top = 184
+        Width = 32
+        DataField = 'tipo_cliente'
+        DataSource = DSCliente
+        MaxLength = 1
+        TabOrder = 2
+      end
+      object DBEdit3: TDBEdit[7]
+        Left = 235
+        Height = 23
+        Top = 128
+        Width = 112
+        DataField = 'cpf_cnpj_cliente'
+        DataSource = DSCliente
+        MaxLength = 18
+        TabOrder = 3
+      end
+      object DBEdit4: TDBEdit[8]
+        Left = 235
+        Height = 23
+        Top = 184
+        Width = 204
+        DataField = 'nome_cliente'
+        DataSource = DSCliente
+        MaxLength = 100
+        TabOrder = 4
+      end
+    end
+  end
+  object DSCliente: TDataSource[1]
+    DataSet = DataModuleF.QRYCliente
+    Left = 496
+    Top = 32
+  end
+end

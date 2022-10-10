@@ -1,0 +1,72 @@
+object LoginF: TLoginF
+  Left = 305
+  Height = 240
+  Top = 127
+  Width = 501
+  Caption = 'Login'
+  ClientHeight = 240
+  ClientWidth = 501
+  LCLVersion = '2.2.2.0'
+  object Label1: TLabel
+    Left = 140
+    Height = 20
+    Top = 33
+    Width = 58
+    Caption = 'Usuário:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 140
+    Height = 20
+    Top = 97
+    Width = 46
+    Caption = 'Senha:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object btnEntrar: TBitBtn
+    Left = 140
+    Height = 30
+    Top = 168
+    Width = 75
+    Caption = 'Entrar'
+    OnClick = btnEntrarClick
+    TabOrder = 0
+  end
+  object EdtUsuario: TEdit
+    Left = 140
+    Height = 23
+    Top = 64
+    Width = 220
+    TabOrder = 1
+  end
+  object EdtSenha: TEdit
+    Left = 140
+    Height = 23
+    Top = 129
+    Width = 220
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+  end
+  object btnMudarSenha: TBitBtn
+    Left = 264
+    Height = 30
+    Top = 168
+    Width = 96
+    Caption = 'Alterar Senha'
+    OnClick = btnMudarSenhaClick
+    TabOrder = 3
+  end
+end

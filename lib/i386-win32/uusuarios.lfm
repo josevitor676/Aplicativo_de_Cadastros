@@ -1,0 +1,214 @@
+inherited UsuariosF: TUsuariosF
+  Caption = 'Usúarios'
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    inherited TabSheet1: TTabSheet
+      OnShow = nil
+      inherited Panel1: TPanel
+        inherited btnBusca: TBitBtn
+          Left = 200
+          Top = 16
+          OnClick = btnBuscaClick
+        end
+        inherited Edit1: TEdit
+          Left = 90
+          Width = 96
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Color = clDefault
+        Columns = <        
+          item
+            Alignment = taCenter
+            Color = clDefault
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'ID'
+            Width = 30
+            FieldName = 'id'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Usúario'
+            Width = 120
+            FieldName = 'usuario'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Nome Completo'
+            Width = 150
+            FieldName = 'nome_completo'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (
+              ''
+            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Senha'
+            Width = 100
+            FieldName = 'senha'
+          end>
+        DataSource = DSUsuarios
+        FixedColor = clWhite
+        FixedHotColor = clWhite
+        Flat = True
+        ParentFont = False
+        ReadOnly = True
+        TitleFont.CharSet = ANSI_CHARSET
+        TitleFont.Color = clBlack
+        TitleFont.Pitch = fpVariable
+        TitleFont.Quality = fqDraft
+        TitleFont.Style = [fsBold]
+        TitleStyle = tsStandard
+      end
+      inherited Panel2: TPanel
+        inherited Panel3: TPanel
+          inherited btnNovo: TBitBtn
+            Left = 24
+            Width = 75
+            OnClick = btnNovoClick
+          end
+          object Novo: TBitBtn[1]
+            Left = 24
+            Height = 30
+            Top = 8
+            Width = 95
+            Caption = 'Novo'
+            Glyph.Data = {
+              8A020000424DA200000000000000B600000028000000240000000D0000000100
+              080000000000D401000000000000000000002000000000000000848484000000
+              BC0000EEF600FFFFFF004242CE00BDBDEF003030CD002020C5001010C6006262
+              D5003838CD007272DD005252D600EFEFFF00CDCDF6008B8BE600DDDDF6009B9B
+              E600ADADEF000000000000000000000000000000000000000000000000000000
+              0000000000000000000000000000000000000000000000000000000000000002
+              0000000200000000000000000000000000000002000000020000000000000200
+              0000000002000000000000000000000000000000000000000000020000000000
+              00020002020000000000000101070101010101010101060101010A0101000000
+              000000020200000000020200000801010101010108040A0A0101010B01010104
+              0101010000020200000000000000000001070301011003010C03050E05010103
+              1201010303010100000000000000000000000000010103010903030104030101
+              01010903030101030E0101010000000000000202020202000101030903070308
+              03030309010103050C0B0D030105010100020202020200000000000001010303
+              0601030104030101010803010103030901030101000000000000000000000000
+              040D0306010103061103050F070305010103030101050D010000000000000000
+              00020200010C01010101040108040A04040B0101010107010101010600020200
+              0000000202000000000101010101010101010101010101010101010101060000
+              0000000202000200000000000200000000010101010101010101010101010100
+              0000000200000000000200000000000200000002000000000000000000000000
+              0000000200000000020000000000
+            }
+            OnClick = NovoClick
+            TabOrder = 1
+          end
+        end
+        inherited Panel4: TPanel
+          inherited BitBtn3: TBitBtn
+            OnClick = BitBtn3Click
+          end
+        end
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      inherited Panel5: TPanel
+        inherited Panel6: TPanel
+          inherited BitBtn4: TBitBtn
+            OnClick = BitBtn4Click
+          end
+          inherited BitBtn5: TBitBtn
+            OnClick = BitBtn5Click
+          end
+        end
+        inherited Panel7: TPanel
+          inherited BitBtn6: TBitBtn
+            OnClick = BitBtn6Click
+          end
+        end
+      end
+      object Label3: TLabel[1]
+        Left = 192
+        Height = 15
+        Top = 129
+        Width = 93
+        Caption = 'Nome do Usúario'
+        ParentColor = False
+      end
+      object Label4: TLabel[2]
+        Left = 192
+        Height = 15
+        Top = 185
+        Width = 89
+        Caption = 'Nome Completo'
+        ParentColor = False
+      end
+      object Label5: TLabel[3]
+        Left = 301
+        Height = 15
+        Top = 78
+        Width = 32
+        Caption = 'Senha'
+        ParentColor = False
+      end
+      object DBEdit1: TDBEdit[4]
+        Left = 192
+        Height = 23
+        Top = 97
+        Width = 40
+        DataField = 'id'
+        DataSource = DSUsuarios
+        Alignment = taRightJustify
+        MaxLength = 0
+        TabOrder = 1
+      end
+      object DBEdit2: TDBEdit[5]
+        Left = 192
+        Height = 23
+        Top = 150
+        Width = 201
+        DataField = 'usuario'
+        DataSource = DSUsuarios
+        MaxLength = 30
+        TabOrder = 2
+      end
+      object DBEdit3: TDBEdit[6]
+        Left = 192
+        Height = 23
+        Top = 205
+        Width = 201
+        DataField = 'nome_completo'
+        DataSource = DSUsuarios
+        MaxLength = 60
+        TabOrder = 3
+      end
+      object DBEdit4: TDBEdit[7]
+        Left = 293
+        Height = 23
+        Top = 97
+        Width = 100
+        DataField = 'senha'
+        DataSource = DSUsuarios
+        MaxLength = 50
+        PasswordChar = '*'
+        TabOrder = 4
+      end
+      object Label2: TLabel[8]
+        Left = 192
+        Height = 15
+        Top = 78
+        Width = 11
+        Caption = 'ID'
+        ParentColor = False
+      end
+    end
+  end
+  object DSUsuarios: TDataSource[1]
+    DataSet = DataModuleF.QRYUsuarios
+    Left = 480
+    Top = 32
+  end
+end

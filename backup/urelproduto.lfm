@@ -1,0 +1,33 @@
+object RelProdutoF: TRelProdutoF
+  Left = 491
+  Height = 240
+  Top = 239
+  Width = 320
+  Caption = 'Relatorio de Produtos'
+  ClientHeight = 240
+  ClientWidth = 320
+  LCLVersion = '2.2.2.0'
+  object btnRelProduto: TBitBtn
+    Left = 72
+    Height = 30
+    Top = 80
+    Width = 166
+    Caption = 'Exibir Relatorio de Produtos'
+    OnClick = btnRelProdutoClick
+    TabOrder = 0
+  end
+  object frReportProdutos: TfrReport
+    Dataset = frDBDataSetProdutos
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 62
+    Top = 152
+  end
+  object frDBDataSetProdutos: TfrDBDataSet
+    DataSet = DataModuleF.QRYProduto
+    Left = 194
+    Top = 151
+  end
+end

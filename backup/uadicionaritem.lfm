@@ -1,0 +1,139 @@
+object AddItemF: TAddItemF
+  Left = 944
+  Height = 299
+  Top = 168
+  Width = 373
+  Caption = 'Adicionar Item'
+  ClientHeight = 299
+  ClientWidth = 373
+  LCLVersion = '2.2.2.0'
+  object Label1: TLabel
+    Left = 26
+    Height = 15
+    Top = 41
+    Width = 43
+    Caption = 'Produto'
+    ParentColor = False
+  end
+  object DBEdit1: TDBEdit
+    Left = 29
+    Height = 23
+    Top = 61
+    Width = 104
+    DataField = 'produtoid'
+    DataSource = OrcamentoF.DSOrcamentoItem
+    ReadOnly = True
+    Alignment = taRightJustify
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 141
+    Height = 25
+    Top = 61
+    Width = 32
+    Caption = '...'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 29
+    Height = 15
+    Top = 111
+    Width = 97
+    Caption = 'Descrição Produto'
+    ParentColor = False
+  end
+  object DBEdit2: TDBEdit
+    Left = 29
+    Height = 23
+    Top = 134
+    Width = 232
+    DataField = 'desc_prod'
+    DataSource = OrcamentoF.DSOrcamentoItem
+    ReadOnly = True
+    Enabled = False
+    MaxLength = 50
+    TabOrder = 2
+  end
+  object DBEQtd: TDBEdit
+    Left = 30
+    Height = 23
+    Top = 208
+    Width = 80
+    DataField = 'qt_produto'
+    DataSource = OrcamentoF.DSOrcamentoItem
+    Alignment = taRightJustify
+    MaxLength = 0
+    TabOrder = 3
+  end
+  object ValorUnitario: TDBEdit
+    Left = 146
+    Height = 23
+    Top = 208
+    Width = 80
+    DataField = 'vl_unitario'
+    DataSource = OrcamentoF.DSOrcamentoItem
+    ReadOnly = True
+    Alignment = taRightJustify
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 4
+  end
+  object DBETotal: TDBEdit
+    Left = 266
+    Height = 23
+    Top = 208
+    Width = 80
+    DataField = 'vl_total'
+    DataSource = OrcamentoF.DSOrcamentoItem
+    ReadOnly = True
+    Alignment = taRightJustify
+    Enabled = False
+    MaxLength = 0
+    TabOrder = 5
+  end
+  object Label3: TLabel
+    Left = 30
+    Height = 15
+    Top = 185
+    Width = 29
+    Caption = 'Qtde.'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 146
+    Height = 15
+    Top = 185
+    Width = 45
+    Caption = 'Vlr. Unit.'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 266
+    Height = 15
+    Top = 185
+    Width = 45
+    Caption = 'Vlr. Total'
+    ParentColor = False
+  end
+  object BitBtn1: TBitBtn
+    Left = 170
+    Height = 30
+    Top = 256
+    Width = 75
+    Caption = 'Inserir'
+    OnClick = BitBtn1Click
+    TabOrder = 6
+  end
+  object BitBtn2: TBitBtn
+    Left = 271
+    Height = 30
+    Top = 255
+    Width = 75
+    Caption = 'Cancelar'
+    OnClick = BitBtn2Click
+    TabOrder = 7
+  end
+end

@@ -1,0 +1,413 @@
+inherited OrcamentoF: TOrcamentoF
+  Left = 301
+  Height = 391
+  Top = 184
+  Width = 875
+  Caption = 'Orçamento'
+  ClientHeight = 391
+  ClientWidth = 875
+  OnShow = FormShow
+  inherited PageControl1: TPageControl
+    Height = 391
+    Width = 875
+    ActivePage = TabSheet2
+    TabIndex = 1
+    OnChange = PageControl1Change
+    inherited TabSheet1: TTabSheet
+      ClientHeight = 363
+      ClientWidth = 867
+      inherited Panel1: TPanel
+        Width = 867
+        ClientWidth = 867
+        inherited btnBusca: TBitBtn
+          OnClick = btnBuscaClick
+        end
+      end
+      inherited DBGrid1: TDBGrid
+        Height = 257
+        Width = 867
+        Columns = <        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'orcamentoid'
+            Width = 80
+            FieldName = 'orcamentoid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'clienteid'
+            Width = 65
+            FieldName = 'clienteid'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'dt_orcamento'
+            Width = 90
+            FieldName = 'dt_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'dt_validade_orcamento'
+            Width = 130
+            FieldName = 'dt_validade_orcamento'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Caption = 'vl_total_orcamento'
+            Width = 140
+            FieldName = 'vl_total_orcamento'
+            DisplayFormat = '#,###0.00'
+          end>
+        DataSource = DSOrcamento
+        ReadOnly = True
+        OnDblClick = DBGrid1DblClick
+      end
+      inherited Panel2: TPanel
+        Top = 313
+        Width = 867
+        ClientWidth = 867
+        inherited Panel3: TPanel
+          Width = 360
+          ClientWidth = 360
+          inherited btnNovo: TBitBtn
+            Left = 16
+            OnClick = btnNovoClick
+          end
+          object btnRelOrcamento: TBitBtn[1]
+            Left = 136
+            Height = 30
+            Top = 8
+            Width = 192
+            Caption = 'Exibir Relatório de Orçamento'
+            Glyph.Data = {
+              4E010000424D4E01000000000000760000002800000012000000120000000100
+              040000000000D800000000000000000000001000000010000000000000000000
+              8000008000000080800080000000800080008080000080808000C0C0C0000000
+              FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+              8888880000008888888888888888880000008888888888888888880000008000
+              0000000088888800000080033333333308888800000080B03333333330888800
+              000080FB0333333333088800000080BFB033333333308800000080FBFB000000
+              00000800000080BFBFBFBFB088888800000080FBFBFBFBF088888800000080BF
+              B000000088888800000088000888888880008800000088888888888888008800
+              0000888888888088808088000000888888888800088888000000888888888888
+              888888000000888888888888888888000000
+            }
+            OnClick = btnRelOrcamentoClick
+            TabOrder = 1
+          end
+        end
+        inherited Panel4: TPanel
+          Left = 697
+        end
+      end
+    end
+    inherited TabSheet2: TTabSheet
+      ClientHeight = 363
+      ClientWidth = 867
+      inherited Panel5: TPanel
+        Top = 313
+        Width = 867
+        ClientWidth = 867
+        inherited Panel6: TPanel
+          Width = 464
+          ClientWidth = 464
+          inherited BitBtn4: TBitBtn
+            OnClick = BitBtn4Click
+          end
+          inherited BitBtn5: TBitBtn
+            Left = 128
+            OnClick = BitBtn5Click
+          end
+          object btnRelOrcItems: TBitBtn[2]
+            Left = 224
+            Height = 30
+            Top = 8
+            Width = 163
+            Caption = 'Exibir Relatório de Itens'
+            Glyph.Data = {
+              DA020000424DDA020000000000003600000028000000110000000D0000000100
+              180000000000A4020000C30E0000C30E00000000000000000000BFBFBF000000
+              000000000000000000000000000000000000000000000000000000000000BFBF
+              BFBFBFBFBFBFBFBFBFBFBFBFBF00BFBFBF000000000000007F7F007F7F007F7F
+              007F7F007F7F007F7F007F7F007F7F007F7F000000BFBFBFBFBFBFBFBFBFBFBF
+              BF00BFBFBF00000000FFFF000000007F7F007F7F007F7F007F7F007F7F007F7F
+              007F7F007F7F007F7F000000BFBFBFBFBFBFBFBFBF00BFBFBF000000FFFFFF00
+              FFFF000000007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F
+              000000BFBFBFBFBFBF00BFBFBF00000000FFFFFFFFFF00FFFF000000007F7F00
+              7F7F007F7F007F7F007F7F007F7F007F7F007F7F007F7F000000BFBFBF00BFBF
+              BF000000FFFFFF00FFFFFFFFFF00FFFF00000000000000000000000000000000
+              000000000000000000000000000000000000BFBFBF00000000FFFFFFFFFF00FF
+              FFFFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFF000000BFBFBFBFBFBFBFBFBFBF
+              BFBFBFBFBF00BFBFBF000000FFFFFF00FFFFFFFFFF00FFFFFFFFFF00FFFFFFFF
+              FF00FFFFFFFFFF000000BFBFBFBFBFBFBFBFBFBFBFBFBFBFBF00BFBFBF000000
+              00FFFFFFFFFF00FFFF000000000000000000000000000000000000000000BFBF
+              BFBFBFBFBFBFBFBFBFBFBFBFBF00BFBFBFBFBFBF000000000000000000BFBFBF
+              BFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBF000000000000000000BFBF
+              BF00BFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBF
+              BFBFBFBFBFBFBFBFBFBFBFBF000000000000BFBFBF00BFBFBFBFBFBFBFBFBFBF
+              BFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBF000000BFBFBFBFBFBFBFBFBF000000
+              BFBFBF000000BFBFBF00BFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBFBF
+              BFBFBFBFBFBFBFBF000000000000000000BFBFBFBFBFBFBFBFBFBFBFBF00
+            }
+            OnClick = btnRelOrcItemsClick
+            TabOrder = 2
+          end
+        end
+        inherited Panel7: TPanel
+          Left = 697
+          inherited BitBtn6: TBitBtn
+            OnClick = BitBtn6Click
+          end
+        end
+      end
+      object Panel8: TPanel[1]
+        Left = 0
+        Height = 64
+        Top = 0
+        Width = 867
+        Align = alTop
+        BevelOuter = bvNone
+        ClientHeight = 64
+        ClientWidth = 867
+        TabOrder = 1
+        object Label2: TLabel
+          Left = 8
+          Height = 15
+          Top = 12
+          Width = 11
+          Caption = 'ID'
+          ParentColor = False
+        end
+        object Label3: TLabel
+          Left = 8
+          Height = 15
+          Top = 41
+          Width = 37
+          Caption = 'Cliente'
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 296
+          Height = 15
+          Top = 12
+          Width = 87
+          Caption = 'Data Orçamento'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 408
+          Height = 15
+          Top = 12
+          Width = 87
+          Caption = 'Data de Validade'
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 520
+          Height = 17
+          Top = 7
+          Width = 103
+          Caption = 'Total Orçamento'
+          Font.CharSet = ANSI_CHARSET
+          Font.Height = -13
+          Font.Pitch = fpVariable
+          Font.Quality = fqDraft
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object DBEdit1: TDBEdit
+          Left = 24
+          Height = 23
+          Top = 8
+          Width = 32
+          DataField = 'orcamentoid'
+          DataSource = DSOrcamento
+          ReadOnly = True
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 0
+        end
+        object DBEdit2: TDBEdit
+          Left = 296
+          Height = 23
+          Top = 33
+          Width = 88
+          DataField = 'dt_orcamento'
+          DataSource = DSOrcamento
+          ReadOnly = True
+          MaxLength = 0
+          TabOrder = 1
+        end
+        object DBEdit3: TDBEdit
+          Left = 408
+          Height = 23
+          Top = 33
+          Width = 80
+          DataField = 'dt_validade_orcamento'
+          DataSource = DSOrcamento
+          ReadOnly = True
+          MaxLength = 0
+          TabOrder = 2
+        end
+        object DBEdit4: TDBEdit
+          Left = 48
+          Height = 23
+          Top = 37
+          Width = 32
+          DataField = 'clienteid'
+          DataSource = DSOrcamento
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 3
+        end
+        object Button1: TButton
+          Left = 80
+          Height = 23
+          Top = 37
+          Width = 32
+          Caption = '...'
+          OnClick = Button1Click
+          TabOrder = 4
+        end
+        object DBEdit5: TDBEdit
+          Left = 520
+          Height = 23
+          Top = 33
+          Width = 103
+          DataField = 'vl_total_orcamento'
+          DataSource = DSOrcamento
+          ReadOnly = True
+          Alignment = taRightJustify
+          MaxLength = 0
+          TabOrder = 5
+        end
+        object BitBtn1: TBitBtn
+          Left = 648
+          Height = 30
+          Top = 26
+          Width = 96
+          Caption = 'Adicionar Item'
+          OnClick = BitBtn1Click
+          TabOrder = 6
+        end
+        object BitBtn2: TBitBtn
+          Left = 768
+          Height = 30
+          Top = 24
+          Width = 75
+          Caption = 'Excluir Item'
+          OnClick = BitBtn2Click
+          TabOrder = 7
+        end
+        object Label7: TLabel
+          Left = 130
+          Height = 1
+          Top = 38
+          Width = 1
+          ParentColor = False
+        end
+      end
+      object DBGrid2: TDBGrid[2]
+        Left = 0
+        Height = 249
+        Top = 64
+        Width = 867
+        Align = alClient
+        Color = clWindow
+        Columns = <        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Item Orçamento ID'
+            Width = 110
+            FieldName = 'orcamentoitemid'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Orçamento ID'
+            Width = 85
+            FieldName = 'orcamentoid'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Produto ID'
+            Width = 70
+            FieldName = 'produtoid'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Quantidade Produto'
+            Width = 120
+            FieldName = 'qt_produto'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Valor Unitario'
+            Width = 90
+            FieldName = 'vl_unitario'
+            DisplayFormat = '#,###0.00'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Valor Total'
+            Width = 80
+            FieldName = 'vl_total'
+            DisplayFormat = '#,###0.00'
+          end        
+          item
+            Alignment = taCenter
+            Title.Alignment = taCenter
+            Title.Caption = 'Descrição Produto'
+            Width = 150
+            FieldName = 'desc_prod'
+          end>
+        DataSource = DSOrcamentoItem
+        TabOrder = 2
+      end
+    end
+  end
+  object DSOrcamento: TDataSource[1]
+    DataSet = DataModuleF.QRYOrcamento
+    Left = 312
+    Top = 264
+  end
+  object DSOrcamentoItem: TDataSource[2]
+    DataSet = DataModuleF.QRYOrcamentoItem
+    Left = 408
+    Top = 264
+  end
+  object frReportOrcamento: TfrReport[3]
+    Dataset = frDBDataSetOrcamento
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 600
+    Top = 248
+  end
+  object frDBDataSetOrcamento: TfrDBDataSet[4]
+    DataSet = DataModuleF.QRYOrcamento
+    Left = 680
+    Top = 248
+  end
+  object frReportOrcamentoItens: TfrReport[5]
+    Dataset = frDBDataSetOrcamentoItens
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 464
+    Top = 344
+  end
+  object frDBDataSetOrcamentoItens: TfrDBDataSet[6]
+    DataSet = DataModuleF.QRYOrcamentoItem
+    Left = 592
+    Top = 344
+  end
+end

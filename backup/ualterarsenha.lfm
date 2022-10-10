@@ -1,0 +1,95 @@
+object AlterarSenhaF: TAlterarSenhaF
+  Left = 432
+  Height = 240
+  Top = 244
+  Width = 439
+  Caption = 'Alterar Senha'
+  ClientHeight = 240
+  ClientWidth = 439
+  LCLVersion = '2.2.2.0'
+  object Label1: TLabel
+    Left = 95
+    Height = 20
+    Top = 71
+    Width = 83
+    Caption = 'Senha Nova'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdtSenhaNova: TEdit
+    Left = 96
+    Height = 23
+    Top = 95
+    Width = 232
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 96
+    Height = 33
+    Top = 184
+    Width = 82
+    Caption = 'Mudar Senha'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 96
+    Height = 20
+    Top = 16
+    Width = 54
+    Caption = 'Usuário'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdtNomeUsuario: TEdit
+    Left = 96
+    Height = 23
+    Top = 44
+    Width = 232
+    TabOrder = 2
+  end
+  object btnFechar: TButton
+    Left = 255
+    Height = 33
+    Top = 184
+    Width = 73
+    Caption = 'Fechar'
+    OnClick = btnFecharClick
+    TabOrder = 3
+  end
+  object Label3: TLabel
+    Left = 96
+    Height = 20
+    Top = 128
+    Width = 155
+    Caption = 'Confirmar nova Senha'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -15
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object EdtConfirmarSenha: TEdit
+    Left = 96
+    Height = 23
+    Top = 152
+    Width = 232
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 4
+  end
+end

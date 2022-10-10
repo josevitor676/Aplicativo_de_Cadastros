@@ -1,0 +1,33 @@
+object RelUsuarioF: TRelUsuarioF
+  Left = 305
+  Height = 189
+  Top = 127
+  Width = 305
+  Caption = 'Relatório de Usúarios'
+  ClientHeight = 189
+  ClientWidth = 305
+  LCLVersion = '2.2.2.0'
+  object btnRelUsuarios: TBitBtn
+    Left = 64
+    Height = 39
+    Top = 72
+    Width = 176
+    Caption = 'Exibir Relatório de Usúarios'
+    OnClick = btnRelUsuariosClick
+    TabOrder = 0
+  end
+  object frReportUsuarios: TfrReport
+    Dataset = frDBDataSetUsuarios
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Left = 72
+    Top = 128
+  end
+  object frDBDataSetUsuarios: TfrDBDataSet
+    DataSet = DataModuleF.QRYUsuarios
+    Left = 200
+    Top = 128
+  end
+end

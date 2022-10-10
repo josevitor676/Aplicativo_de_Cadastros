@@ -1,0 +1,84 @@
+object PesquisarClinteF: TPesquisarClinteF
+  Left = 366
+  Height = 358
+  Top = 175
+  Width = 446
+  Caption = 'Pesquisar Clientes'
+  ClientHeight = 358
+  ClientWidth = 446
+  LCLVersion = '2.2.2.0'
+  object Panel1: TPanel
+    Left = 0
+    Height = 66
+    Top = 0
+    Width = 446
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 66
+    ClientWidth = 446
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 32
+      Height = 15
+      Top = 28
+      Width = 42
+      Caption = 'Codigo:'
+      ParentColor = False
+    end
+    object Edit1: TEdit
+      Left = 80
+      Height = 23
+      Top = 24
+      Width = 96
+      TabOrder = 0
+    end
+    object BitBtn1: TBitBtn
+      Left = 192
+      Height = 23
+      Top = 24
+      Width = 88
+      Caption = 'Buscar'
+      OnClick = BitBtn1Click
+      TabOrder = 1
+    end
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 292
+    Top = 66
+    Width = 446
+    Align = alClient
+    Color = clWindow
+    Columns = <    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'ID'
+        Width = 40
+        FieldName = 'clienteid'
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'CPF/CNPJ'
+        Width = 110
+        FieldName = 'cpf_cnpj_cliente'
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Nome Cliente'
+        Width = 220
+        FieldName = 'nome_cliente'
+      end>
+    DataSource = DSCliente2
+    ReadOnly = True
+    TabOrder = 1
+    OnDblClick = DBGrid1DblClick
+  end
+  object DSCliente2: TDataSource
+    DataSet = DataModuleF.QRYCliente
+    Left = 368
+    Top = 16
+  end
+end
